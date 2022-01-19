@@ -63,8 +63,8 @@ header {
 }
 
 header #logo {
-  width: 58.1px;
-  height: 39.49px;
+  width: 41px;
+  height: 33px;
 }
 
 header h2 {
@@ -75,6 +75,14 @@ header h2 {
 }
 
 header #share {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 41px;
+  height: 41px;
+}
+
+header #share-icon {
   width: 24px;
   height: 24px;
 }
@@ -94,7 +102,7 @@ main #left {
 
 main #left h1 {
   font-family: 'Open Sans';
-  font-size: 56px;
+  font-size: 3.5rem;
   font-weight: 700;
   padding-bottom: 50px;
   -webkit-text-stroke: 1px #fff;
@@ -115,9 +123,7 @@ main #left #caracter div {
 }
 
 main #left #caracter img {
-  border-image: ('../images/stroke.svg');
-  outline-offset: -5px;
-  width: 170px;
+  max-width: 170px;
   height: 170px;
 }
 
@@ -160,12 +166,37 @@ main #right img {
   max-height: 100%;
 }
 @media (max-width: 1120px) {
+  header {
+    padding: 40px 40px 20px;
+  }
   main {
     justify-content: center;
   }
   main #left {
     padding: 0;
   }
+
+  main #left h1 {
+    padding-bottom: 25px;
+  }
+
+  main #left #caracter {
+    flex-direction: column;
+    padding-left: 0;
+  }
+  main #left h1 {
+    font-size: 2rem;
+  }
+
+  main #left #caracter img {
+    width: 75%;
+    height: 75%;
+  }
+
+  .border-caracter {
+    display: none;
+  }
+
   main #right {
     display: none;
   }
